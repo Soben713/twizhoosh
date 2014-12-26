@@ -4,7 +4,7 @@ import random
 class NobodyCares(base_handler.BaseHandler):
 	
 	def timeline_update(self, data):
-		do_reply = (random.randint(0, 20) < 19)
+		do_reply = (random.uniform(0, 500) > 499)
 		if not do_reply or not 'text' in data:
 			return
 		
