@@ -1,5 +1,5 @@
-#!/sr/bin/python
-# -*- coding: tf-8 -*-
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # Wrong to correct
 
