@@ -10,8 +10,7 @@ from core.utils.logging import log
 class NobodyCares(base.BaseTimelineScript):
     def on_timeline_update(self, data):
         do_reply = (random.randint(0, 300) == 0)
-        if not do_reply or data.get('in_reply_to_status_id_str', None) or data['entities']['user_mentions'] or len(
-                data['text']) == 0:
+        if not do_reply or data.get('in_reply_to_status_id_str', None) or data['entities']['user_mentions'] or len(data['text']) == 0:
             return
 
         log('Ok...sending nobody cares')
@@ -22,10 +21,12 @@ class NobodyCares(base.BaseTimelineScript):
         photo = open(photo_path, 'rb')
 
         log('Photo found')
-
         try:
+            screen_name = data['user']['screen_name']
+            status = '@%s %s' % (screen_name)
+            
             self.twitter.update_status_with_media(
-                status='@' + data['user']['screen_name'],
+                status=status,
                 media=photo,
                 in_reply_to_status_id=data['id_str']
             )
