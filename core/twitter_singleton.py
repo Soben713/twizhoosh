@@ -1,9 +1,7 @@
 from twython.api import Twython
-
 from twython.exceptions import TwythonError
 
-from core import settings
-
+import settings
 from core.utils.logging import log
 from core.utils.singleton import Singleton
 
@@ -58,5 +56,5 @@ class TwitterSingleton(metaclass=Singleton):
         except TwythonError as e:
             log("Twython error, updating status with media: {0}".format(e))
 
-    def send_direct_message(self, *args, **kwargs):
-        self.twitter.send_direct_message(*args, **kwargs)
+    def send_direct_message(self, text, user, *args, **kwargs):
+        self.twitter.send_direct_message(text=text, user=user, *args, **kwargs)
