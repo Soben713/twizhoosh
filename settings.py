@@ -24,6 +24,8 @@ INSTALLED_TWITTER_RELATED_SCRIPTS = [
     "good_night",
     "reply_by_learned_replies",
     "learn_to_reply",
+    "get_grade",
+    "hungry",
     "nobody_cares",
 ]
 
