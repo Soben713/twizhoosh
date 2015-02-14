@@ -13,22 +13,28 @@ TWEET_URL_LENGTH = 21
 TWIZHOOSH_USERNAME = 'twizhoosh'
 
 
+# Ordered list of installed twitter related scripts
 INSTALLED_TWITTER_RELATED_SCRIPTS = [
     "dedicate_round_tweets",
-    "mustachify",
+    "remind_round_tweets",
     "spell_checker",
+    "choose_random_choice",
+    "mustachify",
+    "get_grade",
     "good_night",
-    "nobody_cares",
     "reply_by_learned_replies",
     "learn_to_reply",
     "get_grade",
     'hungry',
+    "nobody_cares",
 ]
 
+# Ordered list of installed standalone scripts
 INSTALLED_STANDALONE_SCRIPTS = [
     "call_sherrgoo",
+    "give_advice",
     'give_advice',
 ]
 
 # Stand-Alone repeat time chunks in seconds, every script may override number of chunks
-STAND_ALONE_REPEAT_TIME_CHUNKS = 10
+STAND_ALONE_REPEAT_TIME_CHUNKS = 5
